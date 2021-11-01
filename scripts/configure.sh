@@ -25,10 +25,4 @@ tmux kill-server
 echo "Installing vim plugins..."
 vim +PlugInstall +qall
 
-echo "Creating Files folder"
-mkdir -p ~/Files/Codes
-
-echo "Cloning cheatsheets"
-git clone git@github.com:jerry-peng/cheatsheets.git ~/Files/Codes/cheatsheets
-
 source ~/.zshrc

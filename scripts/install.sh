@@ -113,7 +113,6 @@ brew cleanup
 
 CASKS=(
   adobe-creative-cloud
-  cheatsheet
   docker
   discord
   expressvpn
@@ -121,10 +120,10 @@ CASKS=(
   google-chrome
   iterm2
   malwarebytes
-  notable
   qbittorrent
   spotify
   steam
+  typora
   vagrant
   vagrant-manager
   virtualbox

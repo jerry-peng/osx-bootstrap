@@ -33,7 +33,6 @@ chmod +x ./*.sh
 1. Run `./bootstrap.sh`
 2. Follow script instructions
 
-#### Sync iCloud Documents
+#### Further instructions
 
-Enable System Preferences/Apple ID/iCloud/iCloud Drive/Options/Desktop & Documents Folders
-Instructions on further manual configurations in `~/Documents/FileSync/bootstrap/`
+Instructions on further configuration in notes repo.
