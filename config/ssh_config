@@ -1,5 +1,5 @@
 Host *
-  IgnoreUnknown AddKeysToAgent,UseKeychain
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
+    IgnoreUnknown AddKeysToAgent,UseKeychain
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519

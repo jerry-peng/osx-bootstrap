@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 echo "Creating Files folder"
 mkdir -p ~/Files/Codes
 

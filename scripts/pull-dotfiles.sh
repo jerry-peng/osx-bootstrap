@@ -23,3 +23,7 @@ dotfiles checkout
 dotfiles config status.showUntrackedFiles no
 
 echo "Finished pulling dotfiles"
+
+cp ~/.gitconfig.bak ~/.gitconfig
+echo "Copied .gitconfig"
+echo "Please manually add GitHub email to ~/.gitconfig"
