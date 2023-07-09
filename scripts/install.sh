@@ -88,6 +88,7 @@ PACKAGES=(
     rust-analyzer
     shellcheck
     shellharden
+    stylua
     yaml-language-server
     yamllint
 )
@@ -231,7 +232,6 @@ done
 
 echo "Installing global cargo packages..."
 CARGO_PACKAGES=(
-    stylua
 )
 for package in ${CARGO_PACKAGES}; do
     cargo install $package
