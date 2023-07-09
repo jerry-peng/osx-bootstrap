@@ -100,6 +100,7 @@ echo "Installing rustc through rustup-init... (choose express installation)"
 rustup-init
 
 PACKAGES=(
+    atool
     autoconf
     automake
     ffmpeg
@@ -208,7 +209,6 @@ PYTHON_PACKAGES=(
     cmakelang
     debugpy
     isort
-    klepto
     pipenv
     pynvim
 )
