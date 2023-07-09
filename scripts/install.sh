@@ -211,6 +211,7 @@ PYTHON_PACKAGES=(
     debugpy
     isort
     pipenv
+    pip-review
     pynvim
 )
 for package in ${PYTHON_PACKAGES[@]}; do
