@@ -189,6 +189,7 @@ sudo python3 -m pip install --upgrade pip
 PIP_PACKAGES=(
     pipenv
     pip-review
+    pynvim
 )
 for package in ${PIP_PACKAGES[@]}; do
     pip install $package
