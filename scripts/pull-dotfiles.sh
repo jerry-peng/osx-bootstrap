@@ -11,4 +11,7 @@ for dir in */ ; do
     echo "Linked $dir"
 done
 
+echo "Updating git index to stop tracking changes to gitconfig"
+git update-index --assume-unchanged git/.gitconfig
+
 echo "Please manually add GitHub name and email in ~/.gitconfig"
