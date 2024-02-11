@@ -54,20 +54,23 @@ done
 
 PACKAGES=(
     ghc
+    ghcup
     git
     go
     haskell-stack
     kotlin
     llvm
+    luarock
     neovim
+    npm
     openjdk
     perl
     python
     ruby
     rustup
-    shfmt
     tmux
     vim
+    yarn
     zsh
 )
 echo "Installing languages and basic programming utilities"
@@ -75,46 +78,26 @@ for package in ${PACKAGES[@]}; do
     brew install $package
 done
 
-PACKAGES=(
-    ccls
-    codespell
-    cppcheck
-    docker-ls
-    gopls
-    haskell-language-server
-    kotlin-language-server
-    lua-language-server
-    pyright
-    rust-analyzer
-    shellcheck
-    shellharden
-    stylua
-    yaml-language-server
-    yamllint
-)
-echo "Installing languages servers"
-for package in ${PACKAGES[@]}; do
-    brew install $package
-done
-
 echo "Installing rustc through rustup-init... (choose express installation)"
 rustup-init
+
+echo "Installing rustfmt"
+rustup component add rustfmt
 
 PACKAGES=(
     atool
     autoconf
     automake
+    fd
     ffmpeg
     file-formula
     fzf
     gettext
-    gitui
     graphviz
     imagemagick
     hub
     jpeg
     jq
-    npm
     openssh
     pkg-config
     reattach-to-user-namespace
@@ -123,9 +106,7 @@ PACKAGES=(
     ssh-copy-id
     svn
     tree
-    universal-ctags
     unzip
-    yarn
 )
 echo "Installing misc utilities"
 for package in ${PACKAGES[@]}; do
@@ -179,7 +160,7 @@ QL_CASKS=(
     quicklook-json
     suspicious-package
 )
-echo "Installing cask apps..."
+echo "Installing quicklook cask packages..."
 for cask in ${QL_CASKS[@]}; do
     brew install --cask $cask
 done
@@ -203,29 +184,18 @@ for font in ${FONTS[@]}; do
     brew Install $font
 done
 
-echo "Installing Python packages..."
+echo "Installing global pip packages..."
 sudo python3 -m pip install --upgrade pip
-PYTHON_PACKAGES=(
-    black
-    cmakelang
-    debugpy
-    isort
+PIP_PACKAGES=(
     pipenv
     pip-review
-    pynvim
 )
-for package in ${PYTHON_PACKAGES[@]}; do
+for package in ${PIP_PACKAGES[@]}; do
     pip install $package
 done
 
 echo "Installing global npm packages..."
 NPM_PACKAGES=(
-    eslint_d
-    fixjson
-    prettier
-    typescript
-    typescript-language-server
-    vscode-langservers-extracted
 )
 for package in ${NPM_PACKAGES[@]}; do
     npm install -g $package
@@ -237,9 +207,6 @@ CARGO_PACKAGES=(
 for package in ${CARGO_PACKAGES}; do
     cargo install $package
 done
-
-echo "Installing rustfmt"
-rustup component add rustfmt
 
 echo "Cloning Prezto..."
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
