@@ -168,16 +168,14 @@ done
 echo "Installing fonts..."
 brew tap homebrew/cask-fonts
 FONTS=(
-    font-cascadia-code-pl
     font-caskaydia-cove-nerd-font
-    font-fira-code
+    font-fira-code-nerd-font
+    font-jetbrains-mono-nerd-font
+    font-inconsolata-lgc-nerd-font
     font-fontawesome
-    font-inconsolata
     font-input
     font-montserrat
     font-roboto
-    font-source-code-pro
-    font-source-sans-pro
 )
 
 for font in ${FONTS[@]}; do
@@ -188,7 +186,6 @@ echo "Installing global pip packages..."
 sudo python3 -m pip install --upgrade pip
 PIP_PACKAGES=(
     pipenv
-    pip-review
     pynvim
 )
 for package in ${PIP_PACKAGES[@]}; do
