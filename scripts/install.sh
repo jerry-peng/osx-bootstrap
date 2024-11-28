@@ -128,19 +128,21 @@ done
 
 CASKS=(
     adobe-creative-cloud
+    battle-net
     docker
     discord
-    expressvpn
     firefox
     google-chrome
     iterm2
     malwarebytes
+    obsidian
+    protonvpn
     qbittorrent
+    sony-ps-remote-play
     spotify
     steam
     vagrant
     vagrant-manager
-    virtualbox
     visual-studio-code
     vlc
 )
@@ -170,7 +172,6 @@ brew tap homebrew/cask-fonts
 FONTS=(
     font-caskaydia-cove-nerd-font
     font-fira-code-nerd-font
-    font-jetbrains-mono-nerd-font
     font-inconsolata-lgc-nerd-font
     font-fontawesome
     font-input
