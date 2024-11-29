@@ -3,6 +3,9 @@
 # https://sourabhbajaj.com/mac-setup/Homebrew/Cask.html
 # https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
 
+echo "Installing Rosetta 2"
+softwareupdate --install-rosetta --agree-to-license
+
 echo "Installing packages and applications"
 
 if ! type "brew"
@@ -10,6 +13,8 @@ then
     echo "Installing homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+PATH=$PATH:/opt/homebrew/bin
 
 echo "Updating Homebrew recipes"
 brew update
@@ -60,7 +65,7 @@ PACKAGES=(
     haskell-stack
     kotlin
     llvm
-    luarock
+    luarocks
     neovim
     npm
     openjdk
@@ -92,38 +97,23 @@ PACKAGES=(
     ffmpeg
     file-formula
     fzf
-    gettext
     graphviz
     imagemagick
     hub
     jpeg
     jq
     openssh
-    pkg-config
     reattach-to-user-namespace
     ripgrep
     rsync
     ssh-copy-id
-    svn
+    stow
     tree
     unzip
 )
 echo "Installing misc utilities"
 for package in ${PACKAGES[@]}; do
     brew install $package
-done
-
-echo "Cleaning up..."
-brew cleanup
-
-DRIVERS=(
-    steelseries-exactmouse-tool
-)
-
-echo "Installing cask driver packages..."
-brew tap homebrew/cask-drivers
-for pkg in ${CASK[@]}; do
-    brew install $pkg
 done
 
 CASKS=(
@@ -168,20 +158,21 @@ for cask in ${QL_CASKS[@]}; do
 done
 
 echo "Installing fonts..."
-brew tap homebrew/cask-fonts
 FONTS=(
     font-caskaydia-cove-nerd-font
     font-fira-code-nerd-font
     font-inconsolata-lgc-nerd-font
     font-fontawesome
-    font-input
     font-montserrat
     font-roboto
 )
 
 for font in ${FONTS[@]}; do
-    brew Install $font
+    brew install $font
 done
+
+echo "Cleaning up..."
+brew cleanup
 
 echo "Installing global pip packages..."
 sudo python3 -m pip install --upgrade pip
