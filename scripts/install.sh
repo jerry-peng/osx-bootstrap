@@ -119,9 +119,11 @@ done
 CASKS=(
     adobe-creative-cloud
     battle-net
+    blender
     docker
     discord
     firefox
+    godot
     google-chrome
     iterm2
     malwarebytes
@@ -145,9 +147,7 @@ done
 QL_CASKS=(
     apparency
     betterzip
-    qlcolorcode
     qlmarkdown
-    qlstephen
     quicklook-csv
     quicklook-json
     suspicious-package
