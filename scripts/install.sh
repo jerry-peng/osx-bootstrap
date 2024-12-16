@@ -118,11 +118,13 @@ done
 
 CASKS=(
     adobe-creative-cloud
+    bambu-studio
     battle-net
     blender
     docker
     discord
     firefox
+    freecad
     godot
     google-chrome
     iterm2
