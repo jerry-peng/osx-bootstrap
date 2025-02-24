@@ -71,6 +71,7 @@ PACKAGES=(
     openjdk
     perl
     python
+    pipenv # pipenv installs after python
     ruby
     rustup
     tmux
@@ -179,11 +180,11 @@ brew cleanup
 echo "Installing global pip packages..."
 sudo python3 -m pip install --upgrade pip
 PIP_PACKAGES=(
-    pipenv
+    pip-review
     pynvim
 )
 for package in ${PIP_PACKAGES[@]}; do
-    pip install $package
+    pip3 install --break-system-packages $package
 done
 
 echo "Installing global npm packages..."
