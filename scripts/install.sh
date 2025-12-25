@@ -122,6 +122,7 @@ CASKS=(
     bambu-studio
     battle-net
     blender
+    canon-eos-utility
     docker
     discord
     firefox
@@ -131,7 +132,6 @@ CASKS=(
     iterm2
     malwarebytes
     obsidian
-    protonvpn
     qbittorrent
     sony-ps-remote-play
     spotify
