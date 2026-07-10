@@ -122,6 +122,7 @@ CASKS=(
     bambu-studio
     battle-net
     blender
+    calibre
     canon-eos-utility
     docker
     discord
